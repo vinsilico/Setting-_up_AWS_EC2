@@ -1,0 +1,44 @@
+1.	Create an account with AWS. Enable Multi factor Authentication for security.
+
+2.	Select EC2 from Services –> Compute –> EC2
+
+3.	EC2 Dashboard
+          
+4.	Click on Launch Instance
+          
+5.	Give a name to the instance and go to the next section to choose the operating system. You can choose from a range of 
+    Linux distribution and Windows. AWS Linux 2 is more than enough, and it is free.
+        
+6.	Go to the next section, to select the instance type.
+        
+7.	Next, create a key pair login. Create a pem file, which you need to connect through ssh. 
+    This will download a pem file,eg in this case it will be test.pem 
+   
+8.	Create security groups, HTTPS and TCP from anywhere IP4 and SSH from My IP.
+ 
+9.	Configure storage: EC2 is launched with 8Gb of root volume. You can increase the size of the root volume
+    and add additional Elastic Block storage (EBS) and attach.
+          
+10.	Advanced settings – no need to change anything at this stage
+         
+11.	Check the configuration in the Summary pane.
+
+12.	click on Launch Instance
+
+13.	Now, after few minutes, you will see that the instance is successfully launched.
+
+14.	Go to EC2 dashboard and you will see your instance.
+
+15.	Select your instance and “start the instance” from Instance State
+
+16.	Select your instance and click connect.
+
+17.	A dialog box will appear, in that select the ssh tab and copy the SSH command with the link, which will be like this
+    ssh -i "test.pem" ec2-user@ec2-xx-xx-xxx-xxx.region.compute.amazonaws.com
+
+18.	Open a terminal and browse to folder where the “test.pem” file is present. 
+    Now copy the ssh command and paste in the terminal and enter.
+    
+19.	It will ask for you to confirm the RSA fingerprint. Type yes and it will log you in EC2 instance.
+
+
